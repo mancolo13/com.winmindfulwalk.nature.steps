@@ -32,27 +32,26 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: AppTheme.surfaceColor,
         indicatorColor: AppTheme.primaryColor.withValues(alpha: 0.2),
         destinations: [
-        NavigationDestination(
-          icon: const Icon(Icons.directions_walk_outlined),
-          selectedIcon: const Icon(Icons.directions_walk, color: AppTheme.primaryColor),
-          label: 'Walk',
-        ),
-        NavigationDestination(
-          icon: const Icon(Icons.headphones_outlined),
-          selectedIcon: const Icon(Icons.headphones, color: AppTheme.primaryColor),
-          label: 'Sessions',
-        ),
-        NavigationDestination(
-          icon: const Icon(Icons.park_outlined),
-          selectedIcon: const Icon(Icons.park, color: AppTheme.primaryColor),
-          label: 'Nature',
-        ),
-        NavigationDestination(
-          icon: const Icon(Icons.insights_outlined),
-          selectedIcon: const Icon(Icons.insights, color: AppTheme.primaryColor),
-          label: 'Stats',
-        ),
-
+          NavigationDestination(
+            icon: const Icon(Icons.dashboard_outlined),
+            selectedIcon: const Icon(Icons.dashboard, color: AppTheme.primaryColor),
+            label: 'Step Meter',
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.list_alt_outlined),
+            selectedIcon: const Icon(Icons.list_alt, color: AppTheme.primaryColor),
+            label: 'Prompts',
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.analytics_outlined),
+            selectedIcon: const Icon(Icons.analytics, color: AppTheme.primaryColor),
+            label: 'Forest',
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.settings_outlined),
+            selectedIcon: const Icon(Icons.settings, color: AppTheme.primaryColor),
+            label: 'Trends',
+          ),
         ],
       ),
     );
