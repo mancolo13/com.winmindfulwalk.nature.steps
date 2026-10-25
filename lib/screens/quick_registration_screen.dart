@@ -136,17 +136,12 @@ class QuickRegistrationScreen extends StatelessWidget {
                                       Shadow(
                                         color: Colors.black,
                                         blurRadius: 24,
-                                        offset: Offset(0, 3),
-                                      ),
-                                      Shadow(
-                                        color: Colors.black87,
-                                        blurRadius: 10,
-                                        offset: Offset(0, 1),
+                                        offset: Offset(0, 4),
                                       ),
                                     ],
                                   ),
                                 ),
-                                const SizedBox(height: 2),
+                                const SizedBox(height: 4),
                                 Text(
                                   headlineAccent!,
                                   textAlign: TextAlign.center,
@@ -158,30 +153,24 @@ class QuickRegistrationScreen extends StatelessWidget {
                                     height: 1.04,
                                     shadows: [
                                       Shadow(
-                                        color: Colors.black,
-                                        blurRadius: 24,
-                                        offset: const Offset(0, 3),
-                                      ),
-                                      Shadow(
-                                        color: accentTextColor.withValues(alpha: 0.45),
+                                        color: accentTextColor.withValues(alpha: 0.5),
                                         blurRadius: 28,
-                                        offset: const Offset(0, 0),
+                                        offset: const Offset(0, 4),
                                       ),
                                     ],
                                   ),
                                 ),
-                                const SizedBox(height: 22),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                                const SizedBox(height: 16),
+                                Container(
+                                  constraints: const BoxConstraints(maxWidth: 340),
                                   child: Text(
                                     description!,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 16,
-                                      height: 1.48,
-                                      color: Colors.white.withValues(alpha: 0.94),
+                                      fontSize: 15,
                                       fontWeight: FontWeight.w500,
-                                      letterSpacing: -0.2,
+                                      color: Colors.white.withValues(alpha: 0.90),
+                                      height: 1.45,
                                       shadows: const [
                                         Shadow(
                                           color: Colors.black,
@@ -197,54 +186,51 @@ class QuickRegistrationScreen extends StatelessWidget {
 
                             const Spacer(flex: 3),
 
-                            // Action Button with Primary Theme Color
-                            SizedBox(
-                              width: double.infinity,
-                              height: 58,
-                              child: ElevatedButton(
-                                onPressed: () => _handleCta(context),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: primaryCtaColor,
-                                  foregroundColor: Colors.white,
-                                  elevation: 10,
-                                  shadowColor: primaryCtaColor.withValues(alpha: 0.60),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18),
-                                  ),
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      ctaText!,
-                                      style: const TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w800,
-                                        letterSpacing: 0.3,
+                            // Bottom CTA Button & Footer
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 12.0),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  SizedBox(
+                                    width: double.infinity,
+                                    height: 58,
+                                    child: ElevatedButton(
+                                      onPressed: () => _handleCta(context),
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: primaryCtaColor,
+                                        foregroundColor: Colors.white,
+                                        elevation: 8,
+                                        shadowColor: primaryCtaColor.withValues(alpha: 0.6),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(16),
+                                        ),
+                                      ),
+                                      child: Text(
+                                        ctaText!,
+                                        style: const TextStyle(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w700,
+                                          letterSpacing: 0.2,
+                                        ),
                                       ),
                                     ),
-                                    const SizedBox(width: 10),
-                                    const Icon(Icons.arrow_forward_rounded, size: 22),
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                            const SizedBox(height: 14),
-
-                            // Footer Disclaimer
-                            Text(
-                              footerText!,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: Colors.white.withValues(alpha: 0.72),
-                                fontWeight: FontWeight.w400,
-                                shadows: const [
-                                  Shadow(
-                                    color: Colors.black87,
-                                    blurRadius: 8,
-                                    offset: Offset(0, 1),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  Text(
+                                    footerText!,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white.withValues(alpha: 0.70),
+                                      shadows: const [
+                                        Shadow(
+                                          color: Colors.black,
+                                          blurRadius: 8,
+                                          offset: Offset(0, 1),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ],
                               ),
